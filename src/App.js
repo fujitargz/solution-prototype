@@ -1,6 +1,6 @@
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-import Pages from './pages'
+import Layout from './components/Layout'
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
           backgroundColor: 'white'
         }}
       >
-        <Pages />
+        <Layout />
       </Box>
     </Container>
   );

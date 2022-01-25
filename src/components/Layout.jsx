@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import ToolBar from '../components/ToolBar';
 import List from './List';
 
-const Pages = () => {
+const Layout = () => {
   const [page, setPage] = useState('list');
 
   const navigate = () => {
@@ -39,4 +39,4 @@ const Pages = () => {
   )
 }
 
-export default Pages;
+export default Layout;
