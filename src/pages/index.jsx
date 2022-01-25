@@ -8,7 +8,12 @@ const Pages = () => {
 
   const navigate = () => {
     switch (page) {
+        case 'search': return (null);
+        case 'recipe': return (null);
         case 'list': return (<List />);
+        case 'add': return (null);
+        case 'news': return (null);
+        case 'score': return (null);
         default: return (<List />);
       }
   }
@@ -23,12 +28,13 @@ const Pages = () => {
     >
       <Box
         sx={{
-          overflowY: 'scroll'
+          overflowY: 'auto',
+          flexGrow: 1
         }}
       >
         {navigate()}
       </Box>
-      <ToolBar />
+      <ToolBar onClick={setPage}/>
     </Box>
   )
 }
