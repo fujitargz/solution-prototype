@@ -16,47 +16,59 @@ const ToolBar = (props) => {
         justifyContent: 'space-between',
         padding: 2,
         backgroundColor: 'lightblue',
-        color: 'white'
+        color: 'white',
       }}
     >
       <IconButton
-        size='large'
-        onClick={() => { props.onClick('search') }}
+        size="large"
+        onClick={() => {
+          props.onClick('search');
+        }}
       >
-        <SearchIcon fontSize='inherit'/>
+        <SearchIcon fontSize="inherit" />
       </IconButton>
       <IconButton
-        size='large'
-        onClick={() => { props.onClick('recipe') }}
+        size="large"
+        onClick={() => {
+          props.onClick('recipe');
+        }}
       >
-        <RestaurantIcon fontSize='inherit'/>
+        <RestaurantIcon fontSize="inherit" />
       </IconButton>
       <IconButton
-        size='large'
-        onClick={() => { props.onClick('list') }}
+        size="large"
+        onClick={() => {
+          props.onClick('list');
+        }}
       >
-        <ListIcon fontSize='inherit'/>
+        <ListIcon fontSize="inherit" />
       </IconButton>
       <IconButton
-        size='large'
-        onClick={() => { props.onClick('add') }}
+        size="large"
+        onClick={() => {
+          props.onClick('add');
+        }}
       >
-        <AddCircleOutlineIcon fontSize='inherit'/>
+        <AddCircleOutlineIcon fontSize="inherit" />
       </IconButton>
       <IconButton
-        size='large'
-        onClick={() => { props.onClick('news') }}
+        size="large"
+        onClick={() => {
+          props.onClick('news');
+        }}
       >
-        <NewspaperIcon fontSize='inherit'/>
+        <NewspaperIcon fontSize="inherit" />
       </IconButton>
       <IconButton
-        size='large'
-        onClick={() => { props.onClick('score') }}
+        size="large"
+        onClick={() => {
+          props.onClick('score');
+        }}
       >
-        <InsightsIcon fontSize='inherit'/>
+        <InsightsIcon fontSize="inherit" />
       </IconButton>
     </Box>
-  )
-}
+  );
+};
 
 export default ToolBar;

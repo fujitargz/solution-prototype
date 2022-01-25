@@ -57,7 +57,7 @@ const List = () => {
         <li>リスト</li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
 export default List;
