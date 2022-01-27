@@ -8,35 +8,42 @@ const Layout = () => {
 
   const navigate = () => {
     switch (page) {
-        case 'search': return (null);
-        case 'recipe': return (null);
-        case 'list': return (<List />);
-        case 'add': return (null);
-        case 'news': return (null);
-        case 'score': return (null);
-        default: return (<List />);
-      }
-  }
+      case 'search':
+        return null;
+      case 'recipe':
+        return null;
+      case 'list':
+        return <List />;
+      case 'add':
+        return null;
+      case 'news':
+        return null;
+      case 'score':
+        return null;
+      default:
+        return <List />;
+    }
+  };
 
   return (
     <Box
       sx={{
         height: '100%',
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column',
       }}
     >
       <Box
         sx={{
           overflowY: 'auto',
-          flexGrow: 1
+          flexGrow: 1,
         }}
       >
         {navigate()}
       </Box>
-      <ToolBar onClick={setPage}/>
+      <ToolBar onClick={setPage} />
     </Box>
-  )
-}
+  );
+};
 
 export default Layout;
