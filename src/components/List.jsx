@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
+import AddIcon from '@mui/icons-material/Add';
 import IconButton from '@mui/material/IconButton';
 import { List as MuiList } from '@mui/material';
 import ListSubheader from '@mui/material/ListSubheader';
@@ -164,6 +165,11 @@ const List = () => {
               }}
             >
               <AccessAlarmIcon />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="新規登録">
+            <IconButton>
+              <AddIcon />
             </IconButton>
           </Tooltip>
         </ListSubheader>
