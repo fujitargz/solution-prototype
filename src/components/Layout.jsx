@@ -9,7 +9,7 @@ const Layout = () => {
 
   const navigate = () => {
     switch (page) {
-      case 'search':
+      case 'score':
         return null;
       case 'recipe':
         return <Recipe />;
@@ -19,7 +19,7 @@ const Layout = () => {
         return null;
       case 'news':
         return null;
-      case 'score':
+      case 'settings':
         return null;
       default:
         return <List />;

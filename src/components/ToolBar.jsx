@@ -4,10 +4,10 @@ import InsightsIcon from '@mui/icons-material/Insights';
 import ListIcon from '@mui/icons-material/List';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
-import SearchIcon from '@mui/icons-material/Search';
+import SettingsIcon from '@mui/icons-material/Settings';
 
 const ToolBar = (props) => {
-  const pages = ['search', 'recipe', 'list', 'news', 'score'];
+  const pages = ['score', 'recipe', 'list', 'news', 'settings'];
 
   return (
     <BottomNavigation
@@ -21,11 +21,11 @@ const ToolBar = (props) => {
         props.onClick(pages[newValue]);
       }}
     >
-      <BottomNavigationAction label="Search" icon={<SearchIcon />} />
+      <BottomNavigationAction label="Score" icon={<InsightsIcon />} />
       <BottomNavigationAction label="Recipe" icon={<RestaurantIcon />} />
       <BottomNavigationAction label="List" icon={<ListIcon />} />
       <BottomNavigationAction label="News" icon={<NewspaperIcon />} />
-      <BottomNavigationAction label="Score" icon={<InsightsIcon />} />
+      <BottomNavigationAction label="Settings" icon={<SettingsIcon />} />
     </BottomNavigation>
   );
 };
