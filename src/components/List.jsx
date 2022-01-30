@@ -15,7 +15,7 @@ const initialIngredients = [
     category: '青果',
     bestBy: '',
     useBy: '2022-2-7',
-    bestWayToKeep: '風通しのよい冷暗所で保管'
+    bestWayToKeep: '風通しのよい冷暗所で保管',
   },
   {
     id: 1,
@@ -24,7 +24,7 @@ const initialIngredients = [
     category: '青果',
     bestBy: '',
     useBy: '2022-2-10',
-    bestWayToKeep: '新聞紙等で包み冷蔵庫で保管'
+    bestWayToKeep: '新聞紙等で包み冷蔵庫で保管',
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const initialIngredients = [
     category: '肉',
     bestBy: '',
     useBy: '2022-2-4',
-    bestWayToKeep: '冷蔵庫で保管'
+    bestWayToKeep: '冷蔵庫で保管',
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ const initialIngredients = [
     category: '青果',
     bestBy: '',
     useBy: '2022-2-11',
-    bestWayToKeep: '新聞紙等で包み冷蔵庫で保管'
+    bestWayToKeep: '新聞紙等で包み冷蔵庫で保管',
   },
   {
     id: 4,
@@ -51,7 +51,7 @@ const initialIngredients = [
     category: '青果',
     bestBy: '2022-2-3',
     useBy: '2022-2-4',
-    bestWayToKeep: '水に浸して冷蔵庫で保管'
+    bestWayToKeep: '水に浸して冷蔵庫で保管',
   },
   {
     id: 5,
@@ -60,7 +60,7 @@ const initialIngredients = [
     category: 'その他',
     bestBy: '2022-2-20',
     useBy: '',
-    bestWayToKeep: '冷蔵庫で保管'
+    bestWayToKeep: '冷蔵庫で保管',
   },
   {
     id: 6,
@@ -69,7 +69,7 @@ const initialIngredients = [
     category: 'その他',
     bestBy: '',
     useBy: '2022-2-16',
-    bestWayToKeep: '冷蔵庫で保管'
+    bestWayToKeep: '冷蔵庫で保管',
   },
   {
     id: 7,
@@ -78,7 +78,7 @@ const initialIngredients = [
     category: 'その他',
     bestBy: '',
     useBy: '2022-2-28',
-    bestWayToKeep: '冷蔵庫で保管'
+    bestWayToKeep: '冷蔵庫で保管',
   },
   {
     id: 8,
@@ -87,7 +87,7 @@ const initialIngredients = [
     category: '肉',
     bestBy: '',
     useBy: '2022-2-5',
-    bestWayToKeep: '冷蔵庫で保管'
+    bestWayToKeep: '冷蔵庫で保管',
   },
   {
     id: 9,
@@ -96,7 +96,7 @@ const initialIngredients = [
     category: 'その他',
     bestBy: '2022-2-10',
     useBy: '',
-    bestWayToKeep: '冷蔵庫で保管'
+    bestWayToKeep: '冷蔵庫で保管',
   },
   {
     id: 10,
@@ -105,7 +105,7 @@ const initialIngredients = [
     category: 'その他',
     bestBy: '2022-2-19',
     useBy: '',
-    bestWayToKeep: '冷蔵庫で保管'
+    bestWayToKeep: '冷蔵庫で保管',
   },
   {
     id: 11,
@@ -114,7 +114,7 @@ const initialIngredients = [
     category: '青果',
     bestBy: '',
     useBy: '2022-3-10',
-    bestWayToKeep: '段ボールのまま冷暗所で保管'
+    bestWayToKeep: '段ボールのまま冷暗所で保管',
   },
   {
     id: 12,
@@ -123,7 +123,7 @@ const initialIngredients = [
     category: '青果',
     bestBy: '',
     useBy: '2022-2-9',
-    bestWayToKeep: '新聞紙等で包み冷蔵庫で保管'
+    bestWayToKeep: '新聞紙等で包み冷蔵庫で保管',
   },
 ];
 
@@ -134,8 +134,8 @@ const sortById = (a, b) => {
 const sortByLimit = (a, b) => {
   const aLimit = a.bestBy || a.useBy;
   const bLimit = b.bestBy || b.useBy;
-  const aLimitDate = new Date(aLimit)
-  const bLimitDate = new Date(bLimit)
+  const aLimitDate = new Date(aLimit);
+  const bLimitDate = new Date(bLimit);
   return aLimitDate - bLimitDate;
 };
 
@@ -169,7 +169,9 @@ const List = () => {
         </ListSubheader>
       }
     >
-      {ingredients.map((item) =>  <CollapseItem item={item} />)}
+      {ingredients.map((item) => (
+        <CollapseItem key={item.id} item={item} />
+      ))}
     </MuiList>
   );
 };
