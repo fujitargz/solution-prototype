@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Box from '@mui/material/Box';
 import ToolBar from '../components/ToolBar';
 import List from './List';
+import Recipe from './Recipe';
 
 const Layout = () => {
   const [page, setPage] = useState('list');
@@ -11,7 +12,7 @@ const Layout = () => {
       case 'search':
         return null;
       case 'recipe':
-        return null;
+        return <Recipe />;
       case 'list':
         return <List />;
       case 'add':
